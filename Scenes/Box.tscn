@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cuxeduuj7l52e"]
+[gd_scene load_steps=13 format=3 uid="uid://cuxeduuj7l52e"]
 
 [ext_resource type="Script" path="res://Scripts/Box.gd" id="1_s6hj1"]
 [ext_resource type="Texture2D" uid="uid://cibcntstf71xs" path="res://assets/sokoban_tilesheet.png" id="2_ov36b"]
+[ext_resource type="AudioStream" uid="uid://btw0xtmfyyppo" path="res://SFX/air_move.wav" id="3_25n2o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkneg"]
 atlas = ExtResource("2_ov36b")
@@ -19,7 +20,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5py5j"]
-size = Vector2(71.1111, 71.1111)
+size = Vector2(62.2222, 62.2222)
 
 [sub_resource type="Animation" id="Animation_twg6p"]
 resource_name = "Blink"
@@ -71,17 +72,37 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_k6kwq"]
+resource_name = "left"
+
+[sub_resource type="Animation" id="Animation_pvtv7"]
+resource_name = "move_box"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 0, 0, 0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xss2o"]
 _data = {
 "Blink": SubResource("Animation_twg6p"),
 "RESET": SubResource("Animation_iot4w"),
+"left": SubResource("Animation_k6kwq"),
+"move_box": SubResource("Animation_pvtv7"),
 "pickup": SubResource("Animation_38pie")
 }
 
 [node name="Box" type="Area2D"]
 position = Vector2(40, 24)
 collision_layer = 4
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_s6hj1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -107,5 +128,8 @@ target_position = Vector2(-50, 0)
 target_position = Vector2(0, -50)
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_25n2o")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

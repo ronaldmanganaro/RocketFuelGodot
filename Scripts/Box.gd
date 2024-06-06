@@ -2,6 +2,9 @@ extends Area2D
 
 var tile_size = 64
 var collision_dir
+var animation_speed = 2
+var moving = false
+@onready var sfx = $AudioStreamPlayer2D
 @onready var player = %Player
 @onready var raycast_left = $RayCastLeft
 @onready var raycast_right = $RayCastRight
@@ -9,6 +12,12 @@ var collision_dir
 @onready var raycast_down = $RayCastDown
 @onready var player_ray = "Player/RayCast2dBlockCheck"
 
+var inputs = {
+	"right": Vector2.RIGHT,
+	"left": Vector2.LEFT,
+	"up": Vector2.UP,
+	"down": Vector2.DOWN
+}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -19,14 +28,26 @@ func _process(delta):
 
 func _on_area_entered(area):
 	collision_dir = raycast_right.is_colliding()
-	
+	print("Box area enetered!")
+	print(area.to_string())
 	if player.facing == "left" and !raycast_left.is_colliding():
-		position.x -= tile_size
+		#position.x -= tile_size
+		move_tween(player.facing)
 	elif player.facing == "right" and !raycast_right.is_colliding():
-		position.x += tile_size
+		#position.x += tile_size
+		move_tween(player.facing)
 	elif player.facing == "up" and !raycast_up.is_colliding():
-		position.y -= tile_size
+		#position.y -= tile_size
+		move_tween(player.facing)
 	elif player.facing == "down" and !raycast_down.is_colliding():
-		position.y += tile_size
-	pass # Replace with function body.
+		#position.y += tile_size
+		move_tween(player.facing)
 	
+func move_tween(dir):
+	sfx.play()
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
+	moving = true
+	$AnimationPlayer.play("move_box")
+	await tween.finished
+	moving = false	

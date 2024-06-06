@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/Line2D.gd" id="2_n4ikj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tia2a"]
-size = Vector2(48, 48)
+size = Vector2(24, 32)
 
 [sub_resource type="Animation" id="Animation_c7mrc"]
 resource_name = "down"
@@ -93,9 +93,10 @@ script = ExtResource("2_n4ikj")
 texture = ExtResource("2_47llq")
 hframes = 6
 vframes = 4
-frame = 6
+frame = 21
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
+position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_tia2a")
 
 [node name="RayCast2dFront" type="RayCast2D" parent="."]
@@ -106,7 +107,6 @@ position = Vector2(128, 0)
 rotation = -1.5708
 target_position = Vector2(0, 20)
 hit_from_inside = true
-collide_with_areas = true
 
 [node name="RayCast2dBlockCheckLeft" type="RayCast2D" parent="."]
 position = Vector2(-128, 0)
