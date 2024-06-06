@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/Line2D.gd" id="2_n4ikj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tia2a"]
-size = Vector2(32, 32)
+size = Vector2(48, 48)
 
 [sub_resource type="Animation" id="Animation_c7mrc"]
 resource_name = "down"
@@ -102,26 +102,29 @@ shape = SubResource("RectangleShape2D_tia2a")
 collide_with_areas = true
 
 [node name="RayCast2dBlockCheckRight" type="RayCast2D" parent="."]
-position = Vector2(64, 0)
+position = Vector2(128, 0)
 rotation = -1.5708
-scale = Vector2(1, 0.970164)
+target_position = Vector2(0, 20)
+hit_from_inside = true
 collide_with_areas = true
 
 [node name="RayCast2dBlockCheckLeft" type="RayCast2D" parent="."]
-position = Vector2(-64, 0)
-scale = Vector2(1.0028, 1)
-target_position = Vector2(-64, 0)
+position = Vector2(-128, 0)
+rotation = 1.55334
+target_position = Vector2(0, 20)
+hit_from_inside = true
 collide_with_areas = true
 
 [node name="RayCast2dBlockCheckUp" type="RayCast2D" parent="."]
-position = Vector2(0, -64)
-scale = Vector2(1.00553, 1)
-target_position = Vector2(0, -50)
+position = Vector2(0, -128)
+target_position = Vector2(0, -20)
+hit_from_inside = true
 collide_with_areas = true
 
 [node name="RayCast2dBlockCheckDown" type="RayCast2D" parent="."]
-position = Vector2(0, 64)
-scale = Vector2(0.797129, 1)
+position = Vector2(0, 128)
+target_position = Vector2(0, 20)
+hit_from_inside = true
 collide_with_areas = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

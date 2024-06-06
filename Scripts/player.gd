@@ -1,5 +1,6 @@
 extends Area2D
 
+var facing
 var animation_speed = 2
 var moving = false
 var tile_size = 64
@@ -9,10 +10,8 @@ var inputs = {
 	"up": Vector2.UP,
 	"down": Vector2.DOWN
 }
-var facing
- 
-@onready var ray = $RayCast2dFront
 
+@onready var ray = $RayCast2dFront
 @onready var blockray
 @onready var blockray_right = $RayCast2dBlockCheckRight
 @onready var blockray_left = $RayCast2dBlockCheckLeft
@@ -45,41 +44,22 @@ func move(dir):
 		"down":
 			blockray = blockray_down
 	# if front ray isnt colliding move
-	if !ray.is_colliding():
-		var tween = get_tree().create_tween()
-		tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
-		moving = true
-		$AnimationPlayer.play(dir)
-		await tween.finished
-		moving = false
+	if !ray.is_colliding() or ray.get_collider().to_string().contains("Coin"): 
+		move_tween(dir)
 	# else we are colliding check what collided with
-	else:
-		var name = ray.get_collider().to_string()
-		print("name of collider " + name)
-		#if collider is block check in front of the block
-		if blockray.is_colliding() and name.contains("Box"): 
+	elif ray.is_colliding() and ray.get_collider().to_string().contains("Box"):
+		if blockray.is_colliding():
 			pass
 		else:
-			var tween = get_tree().create_tween()
-			tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
-			moving = true
-			$AnimationPlayer.play(dir)
-			await tween.finished
-			moving = false
-		#if name.contains("Box"):
-			#print("Box")
-			#var tween = get_tree().create_tween()
-			#tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
-			#moving = true
-			#$AnimationPlayer.play(dir)
-			#await tween.finished
-			#moving = false
-		if name.contains("Coin"):
-			print("coin")
-			var tween = get_tree().create_tween()
-			tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
-			moving = true
-			$AnimationPlayer.play(dir)
-			await tween.finished
-			moving = false
+			move_tween(dir)
 			
+func move_tween(dir):
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
+	moving = true
+	$AnimationPlayer.play(dir)
+	await tween.finished
+	moving = false
+	
+	
+
