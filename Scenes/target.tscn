@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://dcs825mi66ff"]
+
+[ext_resource type="Script" path="res://Scripts/target.gd" id="1_2od1x"]
+[ext_resource type="Texture2D" uid="uid://cibcntstf71xs" path="res://assets/sokoban_tilesheet.png" id="1_ylgo8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gm5i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h1pk"]
+atlas = ExtResource("1_ylgo8")
+region = Rect2(704, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of06c"]
+atlas = ExtResource("1_ylgo8")
+region = Rect2(704, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q056l"]
+atlas = ExtResource("1_ylgo8")
+region = Rect2(704, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cq6ue"]
+atlas = ExtResource("1_ylgo8")
+region = Rect2(704, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhalm"]
+atlas = ExtResource("1_ylgo8")
+region = Rect2(704, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pq7yx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h1pk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of06c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q056l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cq6ue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhalm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_2od1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7gm5i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_pq7yx")
+autoplay = "default"
+frame_progress = 0.623213
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
