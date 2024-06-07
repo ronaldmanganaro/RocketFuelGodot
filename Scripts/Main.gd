@@ -10,5 +10,5 @@ func _draw():
 
 func _on_accept_dialog_confirmed():
 	# load next scene?
-	
+
 	pass # Replace with function body.
