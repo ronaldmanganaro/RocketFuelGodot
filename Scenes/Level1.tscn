@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6ltdpgfj667a" path="res://Scenes/Coin.tscn" id="4_2u4y5"]
 [ext_resource type="PackedScene" uid="uid://cuxeduuj7l52e" path="res://Scenes/Box.tscn" id="5_gjgyo"]
 [ext_resource type="PackedScene" uid="uid://dcs825mi66ff" path="res://Scenes/target.tscn" id="6_tkxgc"]
-[ext_resource type="Script" path="res://Scripts/AcceptDialog.gd" id="7_kdwkp"]
+[ext_resource type="PackedScene" uid="uid://uc4i6uu1k03h" path="res://Scenes/GUI.tscn" id="8_yis4u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r7s07"]
 texture = ExtResource("2_wqhs1")
@@ -290,14 +290,12 @@ collision_layer = 1
 
 [node name="Target" parent="." instance=ExtResource("6_tkxgc")]
 z_index = 1
-position = Vector2(800, 288)
+position = Vector2(736, 288)
 
-[node name="AcceptDialog" type="AcceptDialog" parent="."]
-unique_name_in_owner = true
-initial_position = 1
-size = Vector2i(414, 100)
-dialog_text = "Congratulations! Press ok to move to the next level."
-script = ExtResource("7_kdwkp")
+[node name="Gui" parent="." instance=ExtResource("8_yis4u")]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
-[connection signal="confirmed" from="AcceptDialog" to="." method="_on_accept_dialog_confirmed"]
