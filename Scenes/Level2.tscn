@@ -1,15 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5d3vlawmhirj"]
+[gd_scene load_steps=11 format=3 uid="uid://b5d3vlawmhirj"]
 
-[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_e8sl3"]
-[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_b2r6i"]
-[ext_resource type="Texture2D" uid="uid://cibcntstf71xs" path="res://assets/sokoban_tilesheet.png" id="3_qvamh"]
-[ext_resource type="PackedScene" uid="uid://b0wysm6c2nqgj" path="res://Scenes/player.tscn" id="4_86qch"]
-[ext_resource type="PackedScene" uid="uid://b6ltdpgfj667a" path="res://Scenes/Coin.tscn" id="5_0oaaw"]
-[ext_resource type="PackedScene" uid="uid://cuxeduuj7l52e" path="res://Scenes/Box.tscn" id="6_4kldp"]
-[ext_resource type="PackedScene" uid="uid://dcs825mi66ff" path="res://Scenes/target.tscn" id="7_20usb"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_dsek3"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_ac0n2"]
+[ext_resource type="Texture2D" uid="uid://cibcntstf71xs" path="res://assets/sokoban_tilesheet.png" id="3_pv3nu"]
+[ext_resource type="PackedScene" uid="uid://b0wysm6c2nqgj" path="res://Scenes/player.tscn" id="4_anro3"]
+[ext_resource type="PackedScene" uid="uid://b6ltdpgfj667a" path="res://Scenes/Coin.tscn" id="5_npw7t"]
+[ext_resource type="PackedScene" uid="uid://cuxeduuj7l52e" path="res://Scenes/Box.tscn" id="6_uqe88"]
+[ext_resource type="PackedScene" uid="uid://dcs825mi66ff" path="res://Scenes/target.tscn" id="7_uwh3o"]
+[ext_resource type="PackedScene" uid="uid://uc4i6uu1k03h" path="res://Scenes/GUI.tscn" id="8_t4ito"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r7s07"]
-texture = ExtResource("3_qvamh")
+texture = ExtResource("3_pv3nu")
 texture_region_size = Vector2i(64, 64)
 5:0/0 = 0
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -277,35 +278,41 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_r7s07")
 
 [node name="Main2" type="Node2D"]
-script = ExtResource("1_e8sl3")
+script = ExtResource("1_dsek3")
 
 [node name="GameManager" type="Node" parent="."]
-script = ExtResource("2_b2r6i")
+script = ExtResource("2_ac0n2")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_8q7wt")
 format = 2
 layer_0/name = "floor"
-layer_0/tile_data = PackedInt32Array(65546, 786432, 6, 131082, 786432, 6, 196618, 786432, 6, 262154, 786432, 6, 65547, 786432, 6, 131083, 786432, 6, 196619, 786432, 6, 262155, 786432, 6, 65548, 786432, 6, 131084, 786432, 6, 196620, 786432, 6, 262156, 786432, 6, 65549, 786432, 6, 131085, 786432, 6, 196621, 786432, 6, 262157, 786432, 6, 65550, 786432, 6, 131086, 786432, 6, 196622, 786432, 6, 65551, 786432, 6, 131087, 786432, 6, 196623, 786432, 6, 262159, 786432, 6, 65552, 786432, 6, 131088, 786432, 6, 196624, 786432, 6, 262160, 786432, 6, 196609, 786432, 6, 262145, 786432, 6, 327681, 786432, 6, 393217, 786432, 6, 458753, 786432, 6, 196610, 786432, 6, 262146, 786432, 6, 327682, 786432, 6, 393218, 786432, 6, 458754, 786432, 6, 65539, 786432, 6, 131075, 786432, 6, 196611, 786432, 6, 262147, 786432, 6, 327683, 786432, 6, 393219, 786432, 6, 458755, 786432, 6, 65540, 786432, 6, 131076, 786432, 6, 196612, 786432, 6, 262148, 786432, 6, 327684, 786432, 6, 458756, 786432, 6, 65541, 786432, 6, 131077, 786432, 6, 196613, 786432, 6, 262149, 786432, 6, 65542, 786432, 6, 131078, 786432, 6, 196614, 786432, 6, 262150, 786432, 6, 393222, 786432, 6, 65543, 786432, 6, 131079, 786432, 6, 196615, 786432, 6, 262151, 786432, 6, 393223, 786432, 6, 458759, 786432, 6, 65544, 786432, 6, 131080, 786432, 6, 196616, 786432, 6, 262152, 786432, 6, 393224, 786432, 6, 65545, 786432, 6, 131081, 786432, 6, 196617, 786432, 6, 262153, 786432, 6, 393225, 786432, 6, 65537, 786432, 6, 131073, 786432, 6, 65538, 786432, 6, 131074, 786432, 6, 327685, 786432, 6, 327691, 786432, 6, 327690, 786432, 6, 327689, 786432, 6, 327688, 786432, 6, 327687, 786432, 6, 327686, 786432, 6, 393221, 786432, 6, 393220, 786432, 6, 458757, 786432, 6, 458758, 786432, 6, 327696, 786432, 6, 327695, 786432, 6, 327694, 786432, 6, 524293, 786432, 6, 524292, 786432, 6, 524291, 786432, 6, 524290, 786432, 6, 524300, 786432, 6, 524301, 786432, 6, 524302, 786432, 6, 524303, 786432, 6, 524304, 786432, 6, 458768, 786432, 6, 458767, 786432, 6, 393231, 786432, 6, 393230, 786432, 6, 393229, 786432, 6, 458765, 786432, 6, 458764, 786432, 6, 458763, 786432, 6, 458762, 786432, 6, 393228, 786432, 6, 458766, 786432, 6, 393232, 786432, 6, 524289, 786432, 6, 327693, 786432, 6, 327692, 786432, 6, 393227, 786432, 6, 393226, 786432, 6, 458761, 786432, 6, 458760, 786432, 6, 524295, 786432, 6, 524294, 786432, 6)
+layer_0/tile_data = PackedInt32Array(65540, 786432, 6, 131076, 786432, 6, 196612, 786432, 6, 262148, 786432, 6, 327684, 786432, 6, 393220, 786432, 6, 65541, 786432, 6, 131077, 786432, 6, 196613, 786432, 6, 262149, 786432, 6, 327685, 786432, 6, 393221, 786432, 6, 65542, 786432, 6, 131078, 786432, 6, 196614, 786432, 6, 262150, 786432, 6, 327686, 786432, 6, 393222, 786432, 6, 65543, 786432, 6, 131079, 786432, 6, 196615, 786432, 6, 262151, 786432, 6, 327687, 786432, 6, 393223, 786432, 6, 65544, 786432, 6, 131080, 786432, 6, 196616, 786432, 6, 262152, 786432, 6, 327688, 786432, 6, 393224, 786432, 6, 65545, 786432, 6, 131081, 786432, 6, 196617, 786432, 6, 262153, 786432, 6, 327689, 786432, 6, 393225, 786432, 6, 0, 786432, 6, 65536, 786432, 6, 131072, 786432, 6, 196608, 786432, 6, 262144, 786432, 6, 327680, 786432, 6, 393216, 786432, 6, 1, 786432, 6, 65537, 786432, 6, 131073, 786432, 6, 196609, 786432, 6, 262145, 786432, 6, 327681, 786432, 6, 393217, 786432, 6, 2, 786432, 6, 65538, 786432, 6, 131074, 786432, 6, 196610, 786432, 6, 262146, 786432, 6, 327682, 786432, 6, 393218, 786432, 6, 3, 786432, 6, 65539, 786432, 6, 131075, 786432, 6, 196611, 786432, 6, 262147, 786432, 6, 327683, 786432, 6, 393219, 786432, 6, 4, 786432, 6, 5, 786432, 6, 6, 786432, 6, 7, 786432, 6, 8, 786432, 6, 9, 786432, 6)
 layer_1/name = "walls"
-layer_1/tile_data = PackedInt32Array(589831, 262144, 0, 6, 262144, 0, 5, 262144, 0, 7, 262144, 0, 4, 262144, 0, 589830, 262144, 2, 458758, 262144, 0, 524294, 262144, 1, 655366, 262144, 3)
+layer_1/tile_data = PackedInt32Array(393220, 262144, 0, 65545, 262144, 0, 0, 262144, 0, 65536, 262144, 0, 131072, 262144, 0, 196608, 262144, 0, 262144, 262144, 0, 327680, 262144, 0, 393216, 262144, 0, 1, 262144, 0, 393217, 262144, 0, 2, 262144, 0, 393218, 262144, 0, 3, 262144, 0, 393219, 262144, 0, 4, 262144, 0, 5, 262144, 0, 393221, 262144, 0, 6, 262144, 0, 393222, 262144, 0, 7, 262144, 0, 393223, 262144, 0, 8, 262144, 0, 393224, 262144, 0, 9, 262144, 0, 131081, 262144, 0, 196617, 262144, 0, 262153, 262144, 0, 327689, 262144, 0, 393225, 262144, 0)
 
-[node name="Player" parent="." instance=ExtResource("4_86qch")]
+[node name="Player" parent="." instance=ExtResource("4_anro3")]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(350, 251)
+position = Vector2(160, 96)
 
-[node name="Coin" parent="." instance=ExtResource("5_0oaaw")]
-position = Vector2(416, 352)
+[node name="Coin" parent="." instance=ExtResource("5_npw7t")]
+position = Vector2(160, 224)
 collision_layer = 1
 
-[node name="Box" parent="." instance=ExtResource("6_4kldp")]
+[node name="Box" parent="." instance=ExtResource("6_uqe88")]
 z_index = 1
-position = Vector2(672, 288)
+position = Vector2(288, 224)
 collision_layer = 1
 
-[node name="Target" parent="." instance=ExtResource("7_20usb")]
+[node name="Gui" parent="." instance=ExtResource("8_t4ito")]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Target" parent="." instance=ExtResource("7_uwh3o")]
 z_index = 1
-position = Vector2(800, 288)
+position = Vector2(352, 224)
 
 [connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
