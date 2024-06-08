@@ -132,24 +132,24 @@ color = Color(0.0352941, 0.266667, 0.690196, 1)
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 8.0
-offset_right = 768.0
-offset_bottom = 632.0
+offset_left = 416.0
+offset_top = 64.0
+offset_right = 736.0
+offset_bottom = 569.0
 alignment = 1
 vertical = true
 
-[node name="Button" type="Button" parent="BoxContainer"]
+[node name="PlayBtn" type="Button" parent="BoxContainer"]
 layout_mode = 2
 text = "Play"
 script = ExtResource("2_wf3ad")
 
-[node name="Button2" type="Button" parent="BoxContainer"]
-layout_mode = 2
-text = "Quit"
-
-[node name="Button3" type="Button" parent="BoxContainer"]
+[node name="LevelSelectBtn" type="Button" parent="BoxContainer"]
 layout_mode = 2
 text = "Level Select"
 
-[connection signal="button_up" from="BoxContainer/Button" to="BoxContainer/Button" method="_on_button_up"]
+[node name="QuitBtn" type="Button" parent="BoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="button_up" from="BoxContainer/PlayBtn" to="BoxContainer/PlayBtn" method="_on_button_up"]
