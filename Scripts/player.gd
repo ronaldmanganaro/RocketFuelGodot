@@ -17,12 +17,19 @@ var inputs = {
 @onready var blockray_left = $RayCast2dBlockCheckLeft
 @onready var blockray_up = $RayCast2dBlockCheckUp
 @onready var blockray_down = $RayCast2dBlockCheckDown
+@onready var popup_menu = $PopupMenu
+
+
 
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size / 2
 	
 func _unhandled_input(event):
+	if event.is_action_pressed("enter"):	
+		popup_menu.visible = true
+		pass
+	
 	if moving:
 		return
 	for dir in inputs.keys():
