@@ -1,0 +1,67 @@
+{
+	"categories": [
+		{
+			"uuid": "f5eb5459-1aa2-45de-892b-a70aaec60c78",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "53603dac-963a-497c-8feb-80936231a770",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "6e268091-dfa2-47a3-88b0-0521a63e14dd",
+			"title": "Doing",
+			"tasks": [
+				"41ec0a08-6710-4ec3-b68f-131ea20739ac"
+			]
+		},
+		{
+			"uuid": "f8feee19-2d5f-407b-883b-7a0d56826de1",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "41ec0a08-6710-4ec3-b68f-131ea20739ac",
+			"title": "UI",
+			"description": "Make the following menus",
+			"category": "f5eb5459-1aa2-45de-892b-a70aaec60c78",
+			"steps": [
+				{
+					"details": "Puase Menu",
+					"done": false
+				},
+				{
+					"details": "Main Menu",
+					"done": false
+				},
+				{
+					"details": "Level Select",
+					"done": false
+				},
+				{
+					"details": "HUD",
+					"done": false
+				}
+			]
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"53603dac-963a-497c-8feb-80936231a770"
+			],
+			[
+				"6e268091-dfa2-47a3-88b0-0521a63e14dd"
+			],
+			[
+				"f8feee19-2d5f-407b-883b-7a0d56826de1"
+			]
+		]
+	}
+}
