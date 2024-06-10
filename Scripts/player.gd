@@ -19,8 +19,6 @@ var inputs = {
 @onready var blockray_down = $RayCast2dBlockCheckDown
 @onready var popup_menu = $PopupMenu
 
-
-
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size / 2
@@ -67,6 +65,3 @@ func move_tween(dir):
 	$AnimationPlayer.play(dir)
 	await tween.finished
 	moving = false
-	
-	
-

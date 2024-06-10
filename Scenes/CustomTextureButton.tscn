@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dw4c7jje4vq5c" path="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Blue_3Slides.png" id="2_gqhgj"]
 [ext_resource type="Texture2D" uid="uid://cqld3s0aim70b" path="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Red_3Slides_Pressed.png" id="3_fax58"]
 [ext_resource type="Texture2D" uid="uid://bp22h5we75to8" path="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="4_0lh6c"]
-[ext_resource type="Script" path="res://Scenes/Label.gd" id="5_t8nqk"]
+[ext_resource type="Script" path="res://Scripts/Label.gd" id="5_t8nqk"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

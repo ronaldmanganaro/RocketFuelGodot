@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dxtjp0kxotceh"]
 
-[ext_resource type="Script" path="res://Scenes/BoxContainer.gd" id="1_5j1d6"]
-[ext_resource type="Script" path="res://Scenes/SelectLevel.gd" id="2_gqkwb"]
+[ext_resource type="Script" path="res://Scripts/BoxContainer.gd" id="1_5j1d6"]
+[ext_resource type="Script" path="res://Scripts/SelectLevel.gd" id="2_gqkwb"]
 [ext_resource type="Script" path="res://Scripts/PlayButton.gd" id="2_wf3ad"]
 
 [node name="Control" type="Control"]

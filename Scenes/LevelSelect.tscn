@@ -1,13 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://wqm1hqaoj6gp"]
+[gd_scene load_steps=2 format=3 uid="uid://wqm1hqaoj6gp"]
 
-[ext_resource type="Script" path="res://Scenes/LevelSelect.gd" id="1_cvgye"]
-[ext_resource type="Theme" uid="uid://bw4sbvulx1pxv" path="res://Resources/gb_theme.tres" id="2_1tavh"]
-[ext_resource type="Texture2D" uid="uid://dw4c7jje4vq5c" path="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Blue_3Slides.png" id="3_s27p1"]
-[ext_resource type="Texture2D" uid="uid://cqld3s0aim70b" path="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Red_3Slides_Pressed.png" id="4_6x23h"]
-[ext_resource type="Texture2D" uid="uid://bp22h5we75to8" path="res://assets/Tiny Swords (Update 010)/UI/Buttons/Button_Hover_3Slides.png" id="5_i5e8s"]
-[ext_resource type="Script" path="res://Scenes/Label.gd" id="6_2mpwg"]
+[ext_resource type="Script" path="res://Scripts/LevelSelect.gd" id="1_cvgye"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" groups=["buttons"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -38,110 +33,7 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+columns = 4
 script = ExtResource("1_cvgye")
 
-[node name="Level1" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("2_1tavh")
-texture_normal = ExtResource("3_s27p1")
-texture_pressed = ExtResource("4_6x23h")
-texture_hover = ExtResource("5_i5e8s")
-texture_disabled = ExtResource("3_s27p1")
-
-[node name="CenterContainer" type="CenterContainer" parent="GridContainer/Level1"]
-layout_mode = 1
-offset_right = 192.0
-offset_bottom = 51.0
-
-[node name="Label" type="Label" parent="GridContainer/Level1/CenterContainer"]
-layout_mode = 2
-theme = ExtResource("2_1tavh")
-text = "Level 1"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("6_2mpwg")
-
-[node name="Level2" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("2_1tavh")
-texture_normal = ExtResource("3_s27p1")
-texture_pressed = ExtResource("4_6x23h")
-texture_hover = ExtResource("5_i5e8s")
-texture_disabled = ExtResource("3_s27p1")
-
-[node name="CenterContainer" type="CenterContainer" parent="GridContainer/Level2"]
-layout_mode = 1
-offset_right = 192.0
-offset_bottom = 51.0
-
-[node name="Label" type="Label" parent="GridContainer/Level2/CenterContainer"]
-layout_mode = 2
-theme = ExtResource("2_1tavh")
-text = "Level 2"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("6_2mpwg")
-
-[node name="Level3" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("2_1tavh")
-texture_normal = ExtResource("3_s27p1")
-texture_pressed = ExtResource("4_6x23h")
-texture_hover = ExtResource("5_i5e8s")
-texture_disabled = ExtResource("3_s27p1")
-
-[node name="CenterContainer" type="CenterContainer" parent="GridContainer/Level3"]
-layout_mode = 1
-offset_right = 192.0
-offset_bottom = 51.0
-
-[node name="Label" type="Label" parent="GridContainer/Level3/CenterContainer"]
-layout_mode = 2
-theme = ExtResource("2_1tavh")
-text = "Level 3"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("6_2mpwg")
-
-[node name="Main Menu" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("2_1tavh")
-texture_normal = ExtResource("3_s27p1")
-texture_pressed = ExtResource("4_6x23h")
-texture_hover = ExtResource("5_i5e8s")
-texture_disabled = ExtResource("3_s27p1")
-
-[node name="CenterContainer" type="CenterContainer" parent="GridContainer/Main Menu"]
-layout_mode = 1
-offset_right = 192.0
-offset_bottom = 51.0
-
-[node name="Label" type="Label" parent="GridContainer/Main Menu/CenterContainer"]
-layout_mode = 2
-theme = ExtResource("2_1tavh")
-text = "Main Menu"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("6_2mpwg")
-
-[connection signal="button_down" from="GridContainer/Level1" to="GridContainer/Level1/CenterContainer/Label" method="_on_texture_button_button_down"]
-[connection signal="button_up" from="GridContainer/Level1" to="GridContainer" method="_on_level_1_button_up"]
-[connection signal="button_up" from="GridContainer/Level1" to="GridContainer/Level1/CenterContainer/Label" method="_on_texture_button_button_up"]
-[connection signal="button_down" from="GridContainer/Level2" to="GridContainer/Level2/CenterContainer/Label" method="_on_texture_button_button_down"]
-[connection signal="button_up" from="GridContainer/Level2" to="GridContainer" method="_on_level_2_button_up"]
-[connection signal="button_up" from="GridContainer/Level2" to="GridContainer/Level2/CenterContainer/Label" method="_on_texture_button_button_up"]
-[connection signal="button_down" from="GridContainer/Level3" to="GridContainer" method="_on_level_3_button_down"]
-[connection signal="button_down" from="GridContainer/Level3" to="GridContainer/Level3/CenterContainer/Label" method="_on_texture_button_button_down"]
-[connection signal="button_up" from="GridContainer/Level3" to="GridContainer" method="_on_level_3_button_up"]
-[connection signal="button_up" from="GridContainer/Level3" to="GridContainer/Level3/CenterContainer/Label" method="_on_texture_button_button_up"]
-[connection signal="button_down" from="GridContainer/Main Menu" to="GridContainer/Main Menu/CenterContainer/Label" method="_on_texture_button_button_down"]
-[connection signal="button_up" from="GridContainer/Main Menu" to="GridContainer" method="_on_main_menu_button_up"]
-[connection signal="button_up" from="GridContainer/Main Menu" to="GridContainer/Main Menu/CenterContainer/Label" method="_on_texture_button_button_up"]
+[node name="Timer" type="Timer" parent="."]
