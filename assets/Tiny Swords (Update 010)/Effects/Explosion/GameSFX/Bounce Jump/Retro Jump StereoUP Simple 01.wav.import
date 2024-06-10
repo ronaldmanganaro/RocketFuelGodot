@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt0osb3mdr72d"
+path="res://.godot/imported/Retro Jump StereoUP Simple 01.wav-ae9f5b7115ce7c6a6237d174ee0095c1.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/Bounce Jump/Retro Jump StereoUP Simple 01.wav"
+dest_files=["res://.godot/imported/Retro Jump StereoUP Simple 01.wav-ae9f5b7115ce7c6a6237d174ee0095c1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

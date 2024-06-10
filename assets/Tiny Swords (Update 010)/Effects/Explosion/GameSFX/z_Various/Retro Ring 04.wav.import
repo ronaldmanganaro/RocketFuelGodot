@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dacoupff8ihvo"
+path="res://.godot/imported/Retro Ring 04.wav-42a2067b3c2a77641524d20226daf4cf.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/z_Various/Retro Ring 04.wav"
+dest_files=["res://.godot/imported/Retro Ring 04.wav-42a2067b3c2a77641524d20226daf4cf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

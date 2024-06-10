@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0wysm6c2nqgj"]
+[gd_scene load_steps=12 format=3 uid="uid://b0wysm6c2nqgj"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_26y8w"]
 [ext_resource type="Texture2D" uid="uid://fn3ats00hpd7" path="res://assets/sokoban_character.png" id="2_47llq"]
 [ext_resource type="Script" path="res://Scripts/Line2D.gd" id="2_n4ikj"]
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="4_dwx0n"]
+[ext_resource type="AudioStream" uid="uid://x78h6xpnv4ah" path="res://SFX/GameSFX/FootStep/Retro FootStep 03.wav" id="5_peqn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tia2a"]
 size = Vector2(24, 32)
@@ -94,7 +95,7 @@ script = ExtResource("2_n4ikj")
 texture = ExtResource("2_47llq")
 hframes = 6
 vframes = 4
-frame = 21
+frame = 6
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(4, 0)
@@ -164,3 +165,6 @@ text = "Level Select"
 layout_mode = 2
 size_flags_vertical = 4
 text = "Main Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_peqn6")

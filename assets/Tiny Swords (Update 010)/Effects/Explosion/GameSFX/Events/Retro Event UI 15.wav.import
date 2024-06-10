@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bxuvjcisfs3s8"
+path="res://.godot/imported/Retro Event UI 15.wav-0a7f5a65eea980e524aa2fad0704a7ec.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/Events/Retro Event UI 15.wav"
+dest_files=["res://.godot/imported/Retro Event UI 15.wav-0a7f5a65eea980e524aa2fad0704a7ec.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ip4kar36b7ft"
+path="res://.godot/imported/Retro Impact 20.wav-ec366ac2551313f0ad71775519d41bcf.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/Impact/Retro Impact 20.wav"
+dest_files=["res://.godot/imported/Retro Impact 20.wav-ec366ac2551313f0ad71775519d41bcf.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
