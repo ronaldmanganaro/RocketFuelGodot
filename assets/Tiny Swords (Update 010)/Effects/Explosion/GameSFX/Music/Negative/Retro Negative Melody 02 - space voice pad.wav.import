@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0gm4yirmx783"
+path="res://.godot/imported/Retro Negative Melody 02 - space voice pad.wav-7647a51b6395ebab395e9c858a1af8e5.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/Music/Negative/Retro Negative Melody 02 - space voice pad.wav"
+dest_files=["res://.godot/imported/Retro Negative Melody 02 - space voice pad.wav-7647a51b6395ebab395e9c858a1af8e5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

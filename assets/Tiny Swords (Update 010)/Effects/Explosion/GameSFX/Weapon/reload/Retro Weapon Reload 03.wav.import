@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bobhelifuxt3a"
+path="res://.godot/imported/Retro Weapon Reload 03.wav-3f70b47727be610022bfbbf48f64acf4.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/Weapon/reload/Retro Weapon Reload 03.wav"
+dest_files=["res://.godot/imported/Retro Weapon Reload 03.wav-3f70b47727be610022bfbbf48f64acf4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

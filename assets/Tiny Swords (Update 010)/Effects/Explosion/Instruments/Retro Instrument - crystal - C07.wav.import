@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://02eam7nkxcl2"
+path="res://.godot/imported/Retro Instrument - crystal - C07.wav-b7a9ff966961117d4d07c88259aaca65.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/Instruments/Retro Instrument - crystal - C07.wav"
+dest_files=["res://.godot/imported/Retro Instrument - crystal - C07.wav-b7a9ff966961117d4d07c88259aaca65.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

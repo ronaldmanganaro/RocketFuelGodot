@@ -4,6 +4,8 @@ func _ready():
 	Global.CURRENT_LEVEL_NUMBER+=1
 	#print(Global.CURRENT_LEVEL_NUMBER)
 	print(test("fuck"))
+
+	
 	pass # Replace with function body.
 
 func _draw():

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://6g8ofhrbmuwu"
+path="res://.godot/imported/Retro Ring 01.wav-3c486f4796c35f342b501f4d2a16333d.sample"
+
+[deps]
+
+source_file="res://SFX/GameSFX/Alarms Blip Beeps/Retro Ring 01.wav"
+dest_files=["res://.godot/imported/Retro Ring 01.wav-3c486f4796c35f342b501f4d2a16333d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

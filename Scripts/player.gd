@@ -17,12 +17,17 @@ var inputs = {
 @onready var blockray_left = $RayCast2dBlockCheckLeft
 @onready var blockray_up = $RayCast2dBlockCheckUp
 @onready var blockray_down = $RayCast2dBlockCheckDown
+@onready var popup_menu = $PopupMenu
 
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size / 2
 	
 func _unhandled_input(event):
+	if event.is_action_pressed("enter"):	
+		popup_menu.visible = true
+		pass
+	
 	if moving:
 		return
 	for dir in inputs.keys():
@@ -54,12 +59,10 @@ func move(dir):
 			move_tween(dir)
 			
 func move_tween(dir):
+	$AudioStreamPlayer2D.play()
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
 	moving = true
 	$AnimationPlayer.play(dir)
 	await tween.finished
 	moving = false
-	
-	
-

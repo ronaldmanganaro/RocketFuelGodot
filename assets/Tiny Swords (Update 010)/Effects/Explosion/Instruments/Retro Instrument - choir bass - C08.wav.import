@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bdj8sm133p1u5"
+path="res://.godot/imported/Retro Instrument - choir bass - C08.wav-16a391368d0e30165c0bd5babeb442ce.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/Instruments/Retro Instrument - choir bass - C08.wav"
+dest_files=["res://.godot/imported/Retro Instrument - choir bass - C08.wav-16a391368d0e30165c0bd5babeb442ce.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

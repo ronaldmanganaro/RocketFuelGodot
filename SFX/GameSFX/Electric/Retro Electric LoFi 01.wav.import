@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cykffbjda0ils"
+path="res://.godot/imported/Retro Electric LoFi 01.wav-bfb2853763a270a51f5cde8dd1f42651.sample"
+
+[deps]
+
+source_file="res://SFX/GameSFX/Electric/Retro Electric LoFi 01.wav"
+dest_files=["res://.godot/imported/Retro Electric LoFi 01.wav-bfb2853763a270a51f5cde8dd1f42651.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

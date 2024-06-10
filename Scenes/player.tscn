@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0wysm6c2nqgj"]
+[gd_scene load_steps=12 format=3 uid="uid://b0wysm6c2nqgj"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_26y8w"]
 [ext_resource type="Texture2D" uid="uid://fn3ats00hpd7" path="res://assets/sokoban_character.png" id="2_47llq"]
 [ext_resource type="Script" path="res://Scripts/Line2D.gd" id="2_n4ikj"]
+[ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="4_dwx0n"]
+[ext_resource type="AudioStream" uid="uid://x78h6xpnv4ah" path="res://SFX/GameSFX/FootStep/Retro FootStep 03.wav" id="5_peqn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tia2a"]
 size = Vector2(24, 32)
@@ -93,7 +95,7 @@ script = ExtResource("2_n4ikj")
 texture = ExtResource("2_47llq")
 hframes = 6
 vframes = 4
-frame = 21
+frame = 6
 
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 position = Vector2(4, 0)
@@ -132,3 +134,37 @@ root_node = NodePath("../RayCast2dFront")
 libraries = {
 "": SubResource("AnimationLibrary_e3qh4")
 }
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+size = Vector2i(124, 100)
+item_count = 1
+item_0/text = ""
+item_0/id = 0
+script = ExtResource("4_dwx0n")
+
+[node name="GridContainer" type="GridContainer" parent="PopupMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -33.0
+offset_right = 48.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level Select" type="Button" parent="PopupMenu/GridContainer"]
+layout_mode = 2
+text = "Level Select"
+
+[node name="Main Menu" type="Button" parent="PopupMenu/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Main Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_peqn6")

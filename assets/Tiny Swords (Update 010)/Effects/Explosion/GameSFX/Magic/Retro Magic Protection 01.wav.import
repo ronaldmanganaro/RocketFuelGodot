@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cton6fo8uxrjd"
+path="res://.godot/imported/Retro Magic Protection 01.wav-4b3188fd75364b349471cd07b5047f34.sample"
+
+[deps]
+
+source_file="res://assets/Tiny Swords (Update 010)/Effects/Explosion/GameSFX/Magic/Retro Magic Protection 01.wav"
+dest_files=["res://.godot/imported/Retro Magic Protection 01.wav-4b3188fd75364b349471cd07b5047f34.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
