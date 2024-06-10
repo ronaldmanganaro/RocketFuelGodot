@@ -1,6 +1,5 @@
 extends GridContainer
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#	var scenelist = get_node("/root/Scenes").scenes["_sections"]
