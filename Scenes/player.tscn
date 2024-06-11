@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://b0wysm6c2nqgj"]
+[gd_scene load_steps=13 format=3 uid="uid://b0wysm6c2nqgj"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_26y8w"]
 [ext_resource type="Texture2D" uid="uid://fn3ats00hpd7" path="res://assets/sokoban_character.png" id="2_47llq"]
 [ext_resource type="Script" path="res://Scripts/Line2D.gd" id="2_n4ikj"]
 [ext_resource type="Script" path="res://Scripts/PauseMenu.gd" id="4_dwx0n"]
+[ext_resource type="Script" path="res://Scripts/ChangeScene.gd" id="5_4sm74"]
 [ext_resource type="AudioStream" uid="uid://x78h6xpnv4ah" path="res://SFX/GameSFX/FootStep/Retro FootStep 03.wav" id="5_peqn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tia2a"]
@@ -137,6 +138,7 @@ libraries = {
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
 size = Vector2i(124, 100)
+visible = true
 item_count = 1
 item_0/text = ""
 item_0/id = 0
@@ -160,6 +162,8 @@ size_flags_vertical = 4
 [node name="Level Select" type="Button" parent="PopupMenu/GridContainer"]
 layout_mode = 2
 text = "Level Select"
+script = ExtResource("5_4sm74")
+scene_change = "Level2"
 
 [node name="Main Menu" type="Button" parent="PopupMenu/GridContainer"]
 layout_mode = 2
@@ -168,3 +172,5 @@ text = "Main Menu"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_peqn6")
+
+[connection signal="button_down" from="PopupMenu/GridContainer/Level Select" to="PopupMenu/GridContainer/Level Select" method="_on_button_down"]

@@ -2,7 +2,8 @@ extends Area2D
 
 @onready var sfx = $AudioStreamPlayer2D
 @onready var timer = $Timer
-@onready var player = $Player
+#@onready var player = $Player
+@onready var particles: CPUParticles2D = $CPUParticles2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,9 +17,10 @@ func _on_area_entered(area):
 	var name_of_area = area.to_string()
 	
 	if name_of_area.contains("Box"):
-		#print("goalllllll")
+		print("goalllllll")
 		timer.wait_time = .5
 		timer.start()
+		particles.emitting = true
 
 func _on_timer_timeout():
 	sfx.play()

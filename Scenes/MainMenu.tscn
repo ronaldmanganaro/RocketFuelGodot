@@ -39,11 +39,13 @@ script = ExtResource("2_wf3ad")
 
 [node name="LevelSelectBtn" type="Button" parent="BoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_sq330")
 text = "Level Select"
 script = ExtResource("2_gqkwb")
 
 [node name="QuitBtn" type="Button" parent="BoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_sq330")
 text = "Quit"
 
 [connection signal="button_up" from="BoxContainer/PlayBtn" to="BoxContainer/PlayBtn" method="_on_button_up"]

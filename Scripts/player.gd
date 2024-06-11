@@ -24,9 +24,9 @@ func _ready():
 	position += Vector2.ONE * tile_size / 2
 	
 func _unhandled_input(event):
-	if event.is_action_pressed("enter"):	
+	if event.is_action_pressed("pause"):	
 		popup_menu.visible = true
-		pass
+		#pass
 	
 	if moving:
 		return
@@ -66,3 +66,4 @@ func move_tween(dir):
 	$AnimationPlayer.play(dir)
 	await tween.finished
 	moving = false
+
