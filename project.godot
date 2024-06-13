@@ -40,6 +40,10 @@ version_control/autoload_on_startup=true
 
 enabled=PackedStringArray("res://addons/SignalVisualizer/plugin.cfg", "res://addons/godot-git-plugin/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 up={
